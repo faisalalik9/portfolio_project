@@ -187,19 +187,24 @@ transform: translateY(-30px);
   background-repeat: no-repeat;
   background-size: 350px 900px;
   background-position-x: 6vw;
-background-position-y: -2.5vh;
+background-position-y: -6.5vh;
 }
 .about{
   height: 89.8vh;
+  background: #FCFCFF;
 }
 .about-text{
   display: flex;
     align-items: center;
-    transform: translateX(-10vw);
+  transform: translate3d(-12vw,-9vh,0);
 }
 
 .about-text h2{
-  font-size: 40px;
+  font-size: 60px;
+}
+#bout{
+  font-size: 35px;
+  font-weight: 400;
 }
 
 .about-container{
@@ -243,4 +248,50 @@ background-position-y: -2.5vh;
 
 .left-about-container{
   text-align: center;
+  transform: translateY(-3vh);
+}
+
+.about-features{
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 5vh;
+}
+
+.about-features ul{
+  list-style: none;
+  font-size: 18px;
+  width: fit-content;
+}
+.about-features-inside{
+  width: 90%;
+  background: radial-gradient(100% 216.12% at 0% 9.4%, #FFFFFF 13.55%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 8px 32px 0 rgba( 126, 140, 161, 0.27 );
+  backdrop-filter: blur( 4px );
+  --webkit-backdrop-filter: blur( 4px );
+  border-radius: 20px;
+
+  padding: 8% 4%;
+}
+
+.right-about-container{
+  width: 100%;
+}
+
+
+.list-it{
+  margin-bottom: 1vh;
+}
+
+.education, .stack, .dob, .home, .hobbies{
+  margin-bottom: 4vh;
+  display: flex;
+}
+
+.about-content h3{
+  font-size: 22px;
+}
+
+.ic{
+  margin-right: 2vw;
 }
