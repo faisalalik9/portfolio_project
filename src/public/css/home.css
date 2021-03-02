@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+nav{
+  position: sticky;
+  top: 0;
+}
+
 
 .nav-container{
   display: flex;
@@ -132,7 +137,7 @@ transform: translateY(-30px);
 .button-hire{
   margin-top: 4vh;
   width: fit-content;
-  padding: 3% 15%;
+  padding: 3% 10%;
   font-size: 20px;
   color: white;
   background: #ff005c;
@@ -177,8 +182,56 @@ transform: translateY(-30px);
 }
 
 
-.about-container{
+.left-about{
+  background: url('/assets/Union.svg');
+  background-repeat: no-repeat;
+  background-size: 350px 900px;
+  background-position-x: 6vw;
+background-position-y: -2.5vh;
+}
+.about{
+  height: 89.8vh;
+}
+.about-text{
   display: flex;
+    align-items: center;
+    transform: translateX(-10vw);
+}
+
+.about-text h2{
+  font-size: 40px;
+}
+
+.about-container{
+  height: 100%;
+  display: flex;
+}
+
+.images-about, .images-about2{
+  display: flex;
+  align-items: center;
+}
+
+.about-img , .about-img2{
+  clip-path: circle();
+  width: 10vw;
+  transform: translateY(-10vh);
+
+}
+.about-img{
+  transform: translate3d(-3vw, -7vh,0);
+}
+.about-img, .about-img1, .about-img2{
+  transition: all 300ms linear;
+}
+.about-img:hover, .about-img1:hover, .about-img2:hover{
+  opacity: 0.8;
+}
+
+.about-img1{
+  clip-path: circle();
+  width: 30vw;
+  transform: translateX(-7.9vw);
 }
 
 .left-about, .right-about{
@@ -186,4 +239,8 @@ transform: translateY(-30px);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.left-about-container{
+  text-align: center;
 }
