@@ -1,0 +1,189 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5vw;
+  padding: 0.5% 0.5%;
+  font-size: 18px;
+}
+
+
+.nav-list{
+  width: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-txt{
+
+  font-size: 45px;
+  font-weight: 700;
+  color: linear-gradient(180deg, blue, 10%, transparent);
+}
+
+.logo-txt span{
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.li-items{
+  margin-left: 5vw;
+  padding: 1.5% 0;
+  border-bottom: 2px solid white;
+  transition: all 300ms linear;
+}
+
+.li-items:hover{
+
+  border-bottom: 2px solid black;
+}
+
+.nav-logo{
+  display: flex;
+  align-items: center;
+}
+
+.nav-options{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.top{
+  height: 89.8vh;
+  /* background: #94b5c0; */
+}
+
+.top-container{
+  display: flex;
+  height: 100%;
+}
+
+.me{
+  width: 85%;
+  position: absolute;
+  top: 5.8vh;
+  left: 2.3vw;
+  opacity: 0.6;
+}
+.me-bg{
+  width: 100%;
+}
+
+.top-left, .top-right{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-left{
+  width: 45%;
+}
+.top-right{
+  width: 55%;
+}
+
+ .me-icons{
+ text-align: right;
+ margin: 8vh 0;
+
+ }
+
+.lines{
+display: block;
+transform: translateY(-30px);
+}
+
+.me-container{
+  width: 55%;
+  position: relative;
+}
+
+.fa-facebook-square, .fa-instagram, .fa-github, .fa-linkedin{
+  color: black;
+  font-size: 25px;
+  padding: 8px 9px;
+  border: 2px solid #111111;
+   border-radius:0 0 10px 10px;
+  transform: translate3d(0px, 33px, 0px);
+  transition: all 300ms linear;
+}
+
+.fa-facebook-square:hover, .fa-instagram:hover, .fa-github:hover, .fa-linkedin:hover{
+  border: 2px solid white;
+  background: white;
+}
+
+.hidden{
+  display: none;
+}
+
+
+.button-hire{
+  margin-top: 4vh;
+  width: fit-content;
+  padding: 3% 15%;
+  font-size: 20px;
+  color: white;
+  background: #ff005c;
+  border-radius: 0 0 0 20px;
+  transition: all 300ms linear;
+}
+.button-hire a{
+  text-decoration: none;
+  color: white;
+}
+
+.button-hire:hover{
+  border-radius: 0 20px 0 0px;
+}
+
+.top-left-container h2{
+  font-size: 38px;
+}
+.top-left-container h4{
+  font-size: 28px;
+}
+.top-left-container h1{
+  font-size: 45px;
+  overflow: hidden;
+  border-right: .15em solid #78c4d4;
+  white-space: nowrap;
+
+  letter-spacing: .05em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #78c4d4; }
+}
+
+
+.about-container{
+  display: flex;
+}
+
+.left-about, .right-about{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
