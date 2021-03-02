@@ -410,3 +410,116 @@ background: linear-gradient(to right, #a50505, #20002c);
 .skill-row{
   margin-bottom: 5vh;
 }
+
+.projects{
+  min-height: 89.8vh;
+}
+
+.project-block{
+  padding: 0.5%;
+
+  align-items: center;
+  display: flex;
+}
+
+.projects-container{
+  padding: 2% 4%;
+}
+
+.projects-list{
+  padding: 3% 1%;
+  display: flex;
+}
+
+.project-img-div{
+  cursor: pointer;
+  width: 33.33%;
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-img-bg{
+  width: 110%;
+  height: 100%;
+}
+
+.project-img-top{
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur( 4px );
+--webkit-backdrop-filter: blur( 4px );
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.project-img-top-content{
+  text-align: center;
+}
+
+.project-img-top-content h3{
+  font-size: 40px;
+  color: #02020282;
+  font-weight: 700;
+}
+
+.eyantra{
+  width: 3vw;
+}
+
+.project-desc, .project-extra{
+  width: 50%;
+}
+
+.project-desc{
+   padding: 1% 2%;
+}
+
+.project-desc-p{
+  font-size: 14px;
+}
+.fa-star{
+  margin-right: 1vw;
+}
+.project-extra-con{
+ display: flex;
+}
+.video-container{
+  position: relative;
+  width: 50%;
+
+  overflow: hidden;
+}
+
+.video-container img{
+  margin: 1vh 2vw;
+  width: 3vw;
+}
+
+.ros{
+  width: 6vw !important;
+  position: absolute;
+  right: -1vw;
+  top: 12vh;
+}
+.ubuntu{
+  width: 5vw !important;
+}
+.python{
+  position: absolute;
+  right: 1vw;
+  top: 12vh;
+}
+
+.hidden-project{
+  width: 66.66%;
+  display: flex;
+  opacity: 0;
+  transform: translateX(-80vw);
+}

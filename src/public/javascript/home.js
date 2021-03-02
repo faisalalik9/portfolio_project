@@ -31,3 +31,26 @@ $(document).ready(function(){
    $(this).parent().siblings('.toggle-skill-text').toggleClass("hidden-skill-txt");
  });
 });
+
+
+$(function(){
+  $('.project-img-top').fadeOut(300);
+  $('.project-img-div').hover(function(){
+    $('.project-img-top').fadeIn(300);
+  },function(){
+    $('.project-img-top').fadeOut(300);
+  });
+});
+
+$('.project-img-div').click(function(){
+  $('.hidden-project').css("transform","translateX(0)");
+  // var i = 0;
+  // while(i<=1){
+  //   i = i + 0.001;
+  //   setTimeout(function(){
+  //     $('.hidden-project').css("opacity",i);
+  //   },1500);
+  //
+  // }
+  $('.hidden-project').fadeTo("slow", 1);
+})
