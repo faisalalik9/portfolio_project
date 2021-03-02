@@ -10,6 +10,7 @@ function fadein(){
   });
 
   $('.hidden').fadeIn(1000).removeClass('hidden');
+
 }
 
 
@@ -21,4 +22,12 @@ $('.me').mouseover(function(){
 $('.me').mouseleave(function(){
   $(this).attr("src","/assets/me.jpeg");
   $(this).css("opacity","0.6");
+});
+
+
+$(document).ready(function(){
+ $('.skill-rating').click(function(){
+
+   $(this).parent().siblings('.toggle-skill-text').toggleClass("hidden-skill-txt");
+ });
 });

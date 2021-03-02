@@ -199,10 +199,10 @@ background-position-y: -6.5vh;
   transform: translate3d(-12vw,-9vh,0);
 }
 
-.about-text h2{
+.heading-h2{
   font-size: 60px;
 }
-#bout{
+.remaining{
   font-size: 35px;
   font-weight: 400;
 }
@@ -258,10 +258,16 @@ background-position-y: -6.5vh;
   margin-top: 5vh;
 }
 
+
 .about-features ul{
   list-style: none;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
   width: fit-content;
+}
+.rem{
+  font-size: 18px;
+  font-weight: 400;
 }
 .about-features-inside{
   width: 90%;
@@ -273,6 +279,7 @@ background-position-y: -6.5vh;
 
   padding: 8% 4%;
 }
+
 
 .right-about-container{
   width: 100%;
@@ -294,4 +301,109 @@ background-position-y: -6.5vh;
 
 .ic{
   margin-right: 2vw;
+}
+.college{
+  margin: 0;
+  font-size: 18px;
+}
+
+
+.skills{
+  min-height: 89.8vh;
+}
+
+.skills-container{
+  height: 100%;
+  padding: 2% 4%;
+}
+
+.skills-set{
+  padding: 3% 2%;
+}
+
+.skill-box{
+
+
+
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgb(126 140 161 / 27%);
+
+
+  --initialTextColor: #000;
+      --slideTextColor: #FFF;
+
+      --initialBgColor: white;
+      --slideBgColor: #36D1DC;
+
+      color: var(--initialTextColor);
+
+      background-image: linear-gradient(90deg,
+          var(--initialBgColor) 0%,
+          var(--initialBgColor) 50%,
+          var(--slideBgColor) 50%,
+          var(--slideBgColor) 100%);
+      background-size: 200%;
+      transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+        color .2s linear;
+      transition-delay: 0.0s, 0.15s;
+
+}
+
+.skill-box:hover{
+  color: var(--slideTextColor);
+      cursor: pointer;
+      background-position: -75% 100%;
+}
+
+.skill-rating{
+  background: black;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  width: 65px;
+  height: 60px;
+  box-shadow: 0 10 15px rgba(0,0,0,0.4);
+  border-radius:50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.skill-name{
+  width: 77%;
+  font-size: 20px;
+  margin-left: 3%;
+  padding: 3%;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.skill-box-con{
+  display: flex;
+  padding: 5%;
+  width: 100%;
+  align-items: center;
+}
+
+.toggle-skill-text{
+  display: none;
+  background: white;
+  color: black !important;
+  border-radius: 0 0 20px 20px;
+  transition: all 300ms linear;
+}
+
+.hidden-skill-txt{
+  display: block;
+}
+.toggle-text{
+
+  padding: 4%;
+}
+
+.skill-row{
+  margin-bottom: 5vh;
 }
