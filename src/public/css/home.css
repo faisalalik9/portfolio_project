@@ -334,7 +334,7 @@ background-position-y: -6.5vh;
       --slideTextColor: #FFF;
 
       --initialBgColor: white;
-      --slideBgColor: #36D1DC;
+      --slideBgColor: rgba(165,5,5,0.4);
 
       color: var(--initialTextColor);
 
@@ -357,14 +357,17 @@ background-position-y: -6.5vh;
 }
 
 .skill-rating{
-  background: black;
+  background: #20002c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #a50505, #20002c);
+
   color: white;
   font-weight: 600;
   font-size: 20px;
   text-align: center;
   width: 65px;
   height: 60px;
-  box-shadow: 0 10 15px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.4);
   border-radius:50%;
   align-items: center;
   display: flex;
