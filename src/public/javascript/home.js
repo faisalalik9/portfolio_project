@@ -43,9 +43,9 @@ $(function(){
 });
 
 $('.project-img-div').click(function(){
-  $('.projects-list').css("display","block");
+  $(this).parent().parent().css("display","block");
   $(this).siblings('.hidden-project').animate({
-    width: "903.94px"
+    width: "66.66%"
   },{
     duration: 800,
        specialEasing: {

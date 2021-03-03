@@ -484,7 +484,7 @@ align-items: center;
 .project-desc-p{
   font-size: 14px;
 }
-.fa-star{
+.fa-star,.fa-link{
   margin-right: 1vw;
 }
 .project-extra-con{
@@ -529,4 +529,8 @@ align-items: center;
 .project2{
   display: flex;
   align-items: center;
+}
+
+.project-desc-p2{
+  width: 90%;
 }
