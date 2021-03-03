@@ -12,6 +12,68 @@ function fadein(){
   $('.hidden').fadeIn(1000).removeClass('hidden');
 
 }
+var a = 1;
+$(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if (scroll >= 150) {
+    $('nav').addClass("navb");
+  }
+  if(scroll >= 1600){
+
+    // setTimeout(function(){
+    //     $('.projects-count h3').text("2");
+    //   },1000);
+    //
+    //   setTimeout(function(){
+    //     $('.projects-count h3').text("3");
+    //   },1500);
+    //   setTimeout(function(){
+    //     $('.projects-count h3').text("4");
+    //   },2000);
+    //   setTimeout(function(){
+    //     $('.projects-count h3').text("5");
+    //   },2500);
+
+
+    // $({ Counter: 1 }).animate({
+    //   Counter: $('.projects-count h3').text()
+    // }, {
+    //   duration: 4000,
+    //   easing: 'swing',
+    //   step: function() {
+    //     $('.projects-count h3').text(Math.ceil(this.Counter));
+    //   }
+    // });
+
+
+
+    $('.projects-count').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+
+          }
+        });
+    });
+    a = 1;
+
+  }
+
+});
+
+
 
 
 $('.me').mouseover(function(){

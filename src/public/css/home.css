@@ -6,8 +6,13 @@
 nav{
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
+.navb{
+  background-color: rgba(242,242,242,0.8);
+  transition: background-color 400ms linear;
+}
 
 .nav-container{
   display: flex;
@@ -43,7 +48,7 @@ nav{
 .li-items{
   margin-left: 5vw;
   padding: 1.5% 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid transparent;
   transition: all 300ms linear;
 }
 
@@ -124,9 +129,21 @@ transform: translateY(-30px);
   transition: all 300ms linear;
 }
 
-.fa-facebook-square:hover, .fa-instagram:hover, .fa-github:hover, .fa-linkedin:hover{
-  border: 2px solid white;
-  background: white;
+.fa-facebook-square:hover{
+  box-shadow: 0px 5px 10px rgba(66, 103, 178, 0.9);
+  color: #4267B2;
+}
+.fa-linkedin:hover{
+  box-shadow: 0px 5px 10px rgba(0,0,255,0.6);
+  color: blue;
+}
+.fa-github:hover{
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.6);
+  color: #101010;
+}
+.fa-instagram:hover{
+  box-shadow: 0px 5px 10px rgba(251, 57, 88, 0.8);
+  color: #fb3958;
 }
 
 .hidden{
@@ -199,7 +216,14 @@ background-position-y: -6.5vh;
   transform: translate3d(-12vw,-9vh,0);
 }
 
+ .projects-txt{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
 .heading-h2{
+
   font-size: 60px;
 }
 .remaining{
@@ -334,15 +358,15 @@ background-position-y: -6.5vh;
       --slideTextColor: #FFF;
 
       --initialBgColor: white;
-      --slideBgColor: rgba(165,5,5,0.4);
-
+      --slideBgColor: #D6FF79;
+      --slideBgColor2: black;
       color: var(--initialTextColor);
 
       background-image: linear-gradient(90deg,
           var(--initialBgColor) 0%,
           var(--initialBgColor) 50%,
-          var(--slideBgColor) 50%,
-          var(--slideBgColor) 100%);
+          var(--slideBgColor) 55%,
+          var(--slideBgColor2) 100%);
       background-size: 200%;
       transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
         color .2s linear;
@@ -353,13 +377,52 @@ background-position-y: -6.5vh;
 .skill-box:hover{
   color: var(--slideTextColor);
       cursor: pointer;
-      background-position: -75% 100%;
+      background-position: -95% 100%;
 }
+
+
+.skill85:hover{
+  background-position: -85% 100% !important;
+}
+
+.skill2{
+  --slideBgColor: #A09BE7 !important;
+}
+.skill3{
+  --slideBgColor: #DB324D !important;
+}
+.skill4{
+  --slideBgColor: #FF2ECC !important;
+}
+.skill5{
+  --slideBgColor: #F5FBEF !important;
+}
+.skill6{
+  --slideBgColor: #ff005c !important;
+}
+.skill7{
+  --slideBgColor: #00917c !important;
+}
+.skill8{
+  --slideBgColor: #d8c292 !important;
+}
+.skill9{
+  --slideBgColor: #c5d7bd !important;
+}
+.skill10{
+  --slideBgColor: #04F06A !important;
+}
+.skill11{
+  --slideBgColor: #ff75a0 !important;
+}
+.skill12{
+  --slideBgColor: #fb743e !important;
+}
+
 
 .skill-rating{
   background: #20002c;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #a50505, #20002c);
+
 
   color: white;
   font-weight: 600;
@@ -377,7 +440,7 @@ background: linear-gradient(to right, #a50505, #20002c);
 .skill-name{
   width: 77%;
   font-size: 20px;
-  margin-left: 3%;
+  margin-left: 4%;
   padding: 3%;
   border-top: 2px solid white;
   border-left: 2px solid white;
@@ -401,6 +464,7 @@ background: linear-gradient(to right, #a50505, #20002c);
 
 .hidden-skill-txt{
   display: block;
+  background: rgba(245,245,245,0.7);
 }
 .toggle-text{
 
@@ -413,14 +477,25 @@ background: linear-gradient(to right, #a50505, #20002c);
 
 .projects{
   min-height: 89.8vh;
-background: linear-gradient(180deg, #46AEF7 -30.85%, rgba(22, 217, 227, 0.45) 55.77%, rgba(48, 199, 236, 0) 100%);
-border-radius: 0 320px 0 0 ;
+background: linear-gradient(180deg, #46AEF7 -20.85%, rgba(22, 217, 227, 0.45) 40.77%, rgba(48, 199, 236, 0) 100%);
+
 }
+
+.projects-count{
+  margin-right: 2.5vw;
+  font-size: 40px;
+
+}
+.projects-count h3{
+    font-size: 0px;
+
+}
+
 
 .project-block{
   padding: 4% 2%;
   margin: 3% 0;
-
+  padding-right: 1% !important;
   display: flex;
   border-radius: 20px;
   position: relative;
@@ -536,6 +611,8 @@ align-items: center;
   display: flex;
   overflow: hidden;
 }
+
+
 
 
 .project2{
@@ -722,8 +799,14 @@ align-items: center;
 
 
 }
-.phone-icon, .email-icon{
+.call{
   color: white;
+}
+.call:hover{
+  color: white;
+}
+.phone-icon, .email-icon{
+  color: white ;
   background: black;
   display: flex;
   justify-content: center;
