@@ -36,21 +36,23 @@ $(document).ready(function(){
 $(function(){
   $('.project-img-top').fadeOut(300);
   $('.project-img-div').hover(function(){
-    $('.project-img-top').fadeIn(300);
+    $(this).children('.project-img-top').fadeIn(300);
   },function(){
-    $('.project-img-top').fadeOut(300);
+    $(this).children('.project-img-top').fadeOut(300);
   });
 });
 
 $('.project-img-div').click(function(){
-  $('.hidden-project').css("transform","translateX(0)");
-  // var i = 0;
-  // while(i<=1){
-  //   i = i + 0.001;
-  //   setTimeout(function(){
-  //     $('.hidden-project').css("opacity",i);
-  //   },1500);
-  //
-  // }
+  $('.projects-list').css("display","block");
+  $(this).siblings('.hidden-project').animate({
+    width: "903.94px"
+  },{
+    duration: 800,
+       specialEasing: {
+           width: 'linear'
+       }
+  });
+  // $('.hidden-project').css("width","903.94px");
+
   $('.hidden-project').fadeTo("slow", 1);
 })

@@ -433,7 +433,7 @@ background: linear-gradient(to right, #a50505, #20002c);
 
 .project-img-div{
   cursor: pointer;
-  width: 33.33%;
+  width: 451.96px;
   height: 40vh;
   overflow: hidden;
   position: relative;
@@ -518,8 +518,15 @@ align-items: center;
 }
 
 .hidden-project{
-  width: 66.66%;
+  opacity: 0.1;
+  width: 0;
+  height: 321.6px;
   display: flex;
-  opacity: 0;
-  transform: translateX(-80vw);
+  overflow: hidden;
+}
+
+
+.project2{
+  display: flex;
+  align-items: center;
 }
