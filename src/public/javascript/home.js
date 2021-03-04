@@ -299,3 +299,31 @@ $('.about-img2').mouseover(function(){
 $('.khan').mouseleave(function(){
   $(this).css("z-index","-10");
 });
+
+
+
+$(".color-toggler").click(function(){
+  const randomColor ="#"+ Math.floor(Math.random()*16777215).toString(16);
+
+  $('.fa-dot-circle').css("color",randomColor);
+  $('.color-toggle').css("background",randomColor);
+  $('.star-after').css("color",randomColor);
+  $('#rating-btn').css("background",randomColor);
+
+});
+
+
+$('.work-in-progress-img').mouseover(function(){
+  $('.work-icon').css("display","block");
+});
+$('.work-icon').mouseleave(function(){
+  $(this).css("display","none");
+})
+
+$('.cross').click(function(){
+  $('.pop-up').css("display","none");
+});
+
+$('.pop-up-toggler').click(function(){
+  $('.pop-up').css("display","block");
+})

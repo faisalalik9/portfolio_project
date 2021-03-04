@@ -75,6 +75,12 @@
         </div>
 
       </div>
+
+
+      <div   class="pop-up-toggler">
+      <i class="far fa-address-card"></i>
+      </div>
+
     </section>
 
     <section class="about" id="about">
@@ -109,7 +115,7 @@
 
 
          </section>
-         <div class="images-about">
+         <div class="images-about" id="phone-images-about">
             <div class="about-text">
               <h2 class="heading-h2">A<span class="remaining">bout</span></h2>
             </div>
@@ -623,6 +629,9 @@ Google APIs.</p>
             <div class="contact-block-con">
               <div class="get-in-touch-txt">
                 <h3>Get in Touch</h3>
+                <div class="color-toggler">
+                  <i class="fas fa-dot-circle"></i>
+                </div>
               </div>
               <form action="/" method="post">
               <div class="contact-input-name">
@@ -654,14 +663,14 @@ Google APIs.</p>
 
                 <div class="right-details" id="small-p">
                   <div class="phone-d">
-                    <div class="phone-icon">
+                    <div class="phone-icon color-toggle">
                       <a class="call"href="tel:+91-812-613-3852"><i class="fas fa-mobile"></i></a>
                     </div><div class="phone-txt">
                       +91 8126133852
                     </div>
                   </div>
                   <div class="email-d">
-                    <div class="email-icon">
+                    <div class="email-icon color-toggle">
                       <a class="call"href="mailto:faisalalik9@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                     <div class="mail-txt">
@@ -671,7 +680,7 @@ Google APIs.</p>
                 </div>
                 <div class="right-details location">
                   <div class="phone-d location-d">
-                    <div class="phone-icon">
+                    <div class="phone-icon color-toggle">
                       <a class="call" href="https://goo.gl/maps/S4fJxvQDg9gkJTGK8"><i class="fas fa-map-marker-alt"></i></a>
                     </div><div class="phone-txt">
                       NIT Kurukshetra, Kurukshetra
@@ -702,7 +711,7 @@ Google APIs.</p>
                   <input required="true" id="star-value" type="text" name="star" value="" placeholder="">
                 </div>
                 <div class="stars">
-                  <button id="rating-btn" type="submit" >Rate</button>
+                  <button  id="rating-btn" type="submit" >Rate</button>
                 </div>
               </form>
               </div>
@@ -713,6 +722,55 @@ Google APIs.</p>
     </section>
 
 
+    <!-- pop-up-code -->
+
+
+<section class="pop-up">
+  <div class="pop-up-container">
+    <div class="pop-up-block">
+       <div class="left-pop-up">
+         <div class="button-hire">
+           <a href="https://drive.google.com/file/d/1quPDG8R9erIaeq4GGqwAMd-TlN0iH6by/view?usp=sharing">Download CV</a>
+         </div>
+         <div class="button-hire">
+           <a href="/">Hire me</a>
+         </div>
+
+         <div class="average-rating">
+           Charges : $X/hr </br>
+           Customer review : xyz </br>
+           Average rating : x
+         </div>
+       </div>
+       <div class="right-pop-up">
+         <div class="cross">
+           <i class="fas fa-cut"></i>
+         </div>
+         <div class="work-in-progress">
+           <h3>Chat with me</h3>
+           <div class="work-in-progress-img">
+             <img src="https://www.sketchappsources.com/resources/source-image/facebook-like-chatbox-kristapselsins.png" alt="">
+             <img class="work-icon" src="/assets/work-in-progress.jpg" alt="">
+           </div>
+         </div>
+
+
+
+       </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
     <footer>
 
       <div class="footer-container">
@@ -720,5 +778,10 @@ Google APIs.</p>
       <p>Made with <i class="fas fa-heart"></i> by <a target="_blank" href="https://www.linkedin.com/in/faisal-ali-khan-4409631aa/">nova</a></p>
       </div>
     </footer>
+
+
+
+
+
 
 <%- include('partials/footer') -%>

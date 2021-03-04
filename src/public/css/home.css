@@ -212,6 +212,32 @@ background-position-x: right !important;
 
 
 
+.pop-up-block {
+
+    width: 95% !important;
+    height: 50% !important;
+ }
+
+ .left-pop-up {
+     width: 45%!important;
+     padding: 3% !important;
+   }
+
+   .right-pop-up {
+
+       width: 55% !important;
+
+       padding: 3% !important;
+}
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -301,6 +327,7 @@ nav{
 
 
 .top{
+  position: relative;
   height: 89.8vh;
   /* background: #94b5c0; */
 }
@@ -434,6 +461,9 @@ transform: translateY(-30px);
 }
 
 
+#phone-images-about{
+  display: none;
+}
 .left-about{
   background: url('/assets/Union.svg');
   background-repeat: no-repeat;
@@ -1016,6 +1046,7 @@ align-items: center;
 }
 
 .get-in-touch-txt{
+  position: relative;
 display: flex;
 padding: 2%;
 justify-content: center;
@@ -1231,4 +1262,136 @@ footer a:hover{
 .fa-heart{
   color: red;
   cursor: pointer;
+}
+
+
+
+
+.color-toggler{
+  top: 10%;
+    position: absolute;
+    right: 5%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* pop-up css */
+
+
+.pop-up{
+  display: none;
+  z-index: 1000;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+}
+
+.pop-up-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: rgba(40,40,40,0.6);
+}
+
+.pop-up-block{
+  border-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgb(126 140 161 / 27%);
+  width: 50%;
+  height: 70%;
+  display: flex;
+}
+.left-pop-up{
+
+  width: 35%;
+  padding: 6%;
+  background: white;
+  border-radius: 30px 0 0 30px;
+}
+.cross{
+  cursor: pointer;
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  font-size: 22px;
+}
+
+.right-pop-up{
+  position: relative;
+  border-left: 4px solid black;
+  border-radius: 0 30px 30px 0;
+  width: 65%;
+  background: white;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+
+}
+.rate-inside{
+  margin-top: 3vh;
+}
+.average-rating{
+  font-size: 16px;
+  margin-top: 5vh;
+}
+.work-in-progress{
+  width: 70%
+}
+.work-in-progress h3{
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.work-in-progress-img{
+  position: relative;
+  overflow: hidden;
+  width: 100%%;
+}
+.work-in-progress-img img{
+  width: 100%;
+}
+
+.work-icon{
+  right: 0;
+position: absolute;
+top: 0;
+height: 100%;
+  opacity: 0.8;
+  display: none;
+}
+
+
+.pop-up-toggler{
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 27%);
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+bottom: 6vh;
+left: 4vw;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+background: rgba(242,242,242,1);
+color: black;
+cursor: pointer;
+transition: all 300ms linear;
+}
+.pop-up-toggler:hover{
+  background: #ff005c;
+  color: white;
 }
