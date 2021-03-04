@@ -107,7 +107,8 @@
 }
 
 .right-container-con {
-  height: 85vh !important;
+  background: rgba(174,174,174,0.4) !important;
+  height: 86vh !important;
   transform: translateY(-25vh) !important;
 }
 .right-details{
@@ -131,9 +132,24 @@
   margin-top: 20vh;
 }
 
-
-
-
+.submit-c button{
+  width: 22vw !important;
+  padding: 2% !important;
+}
+#rating-btn{
+  width: 18vw !important;
+  padding: 1% 2% !important;
+}
+.name-c{
+  font-size: 18px !important;
+}
+.contact-input-name{
+  height: 55.95px !important;
+   padding: 1% 4% !important;
+}
+.message-c{
+  padding: 1% 4% !important;
+}
 
 
 
