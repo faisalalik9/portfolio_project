@@ -1,3 +1,55 @@
+@media only screen and (max-width: 600px){
+
+  .nav-list{
+    display: none !important;
+  }
+  .toggler-nav{
+    display: block !important;
+  }
+  .top-container{
+    display: block !important;
+  }
+
+  .top-left{
+    padding-top: 20% !important;
+    width: 100% !important;
+  }
+  .top-right{
+    width: 100% !important;
+    padding-top: 20% !important;
+  }
+  .lines{
+    display: none !important;
+  }
+  .about-container{
+    height: 100%;
+    display: block !important;
+  }
+  .left-about{
+    display: none !important;
+  }
+  .right-about{
+    width: 100% !important;
+  }
+  .right-about-container {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
 *{
   padding: 0;
   margin: 0;
@@ -13,6 +65,14 @@ nav{
   background-color: rgba(242,242,242,0.8);
   transition: background-color 400ms linear;
 }
+.toggler-nav{
+  display: none;
+}
+.toggler-nav-icon{
+  font-size:25px;
+  cursor: pointer;
+}
+
 
 .nav-container{
   display: flex;
@@ -426,7 +486,7 @@ transition: all 300ms linear;
 
       --initialBgColor: white;
       --slideBgColor: #D6FF79;
-      --slideBgColor2: black;
+      --slideBgColor2: #3f3f3f;
       color: var(--initialTextColor);
 
       background-image: linear-gradient(90deg,
