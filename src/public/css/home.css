@@ -83,6 +83,40 @@
 }
 
 
+
+.contact{
+  height: auto !important;
+}
+.contact-section{
+  padding-top: 5% !important;
+  display: block !important;
+  height: auto !important;
+}
+.left-contact{
+  width: 100% !important;
+  padding: 5% 0 !important;
+  display: flex;
+  justify-content: center !important;
+  margin-bottom: 5vh;
+
+}
+
+.right-contact{
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.right-container-con {
+  height: 80vh !important;
+  transform: none !important;
+}
+.right-details{
+  padding: 4%;
+  margin-left: 2vw !important;
+  display: block !important;
+}
+
+
 }
 
 
