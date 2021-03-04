@@ -15,8 +15,28 @@
     width: 100% !important;
   }
   .top-right{
+    display: block !important;
+    
     width: 100% !important;
     padding-top: 20% !important;
+  }
+  .me-container{
+    width: 65% !important;
+    margin: 0 16.5% !important;
+  }
+  .me{
+    top: 3.8vh !important;
+  left: 4.5vw !important;
+  }
+  .top-left-container h2 {
+      font-size: 30px !important;
+  }
+  .top-left-container h4 {
+      font-size: 25px !important;
+  }
+  .top-left-container h1 {
+
+    font-size: 37px !important;
   }
   .lines{
     display: none !important;
@@ -42,7 +62,7 @@
 }
 .about-features ul {
     list-style: none !important;
-    font-size: 1em !important;
+    font-size: 18px !important;
     font-weight: 700 !important;
     width: 55% !important;
 }
@@ -50,14 +70,14 @@
   padding-left: 5%;
 }
 .rem{
-  font-size: 0.8em !important;
+  font-size: 16px !important;
 }
 .about-content h3 {
-    font-size: 1.1em !important;
+    font-size: 18px !important;
 }
 .college {
     margin: 0 !important;
-    font-size: 1em !important;
+    font-size: 16px !important;
 }
 .skills{
   background-position-x: 70px !important;
