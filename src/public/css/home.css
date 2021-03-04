@@ -37,7 +37,7 @@
   transform: none !important;
 }
 .phone-icons{
-  display: flex;
+  display: flex !important;
   justify-content: space-around;
   margin: 4vh 0;
   border-top: 2px solid black;
@@ -338,6 +338,9 @@ nav{
  text-align: right;
  margin: 8vh 0;
 
+ }
+ .phone-icons{
+   display: none;
  }
 
 .lines{
