@@ -44,14 +44,24 @@
     list-style: none !important;
     font-size: 1em !important;
     font-weight: 700 !important;
-    width: 50% !important;
+    width: 55% !important;
+}
+.about-content{
+  padding-left: 5%;
+}
+.rem{
+  font-size: 0.8em !important;
 }
 .about-content h3 {
-    font-size: 1.2em !important;
+    font-size: 1.1em !important;
 }
 .college {
     margin: 0 !important;
     font-size: 1em !important;
+}
+.skills{
+  background-position-x: 70px !important;
+background-position-y: 0 !important;
 }
 .skill-row{
   margin-bottom: 3vh !important;
@@ -86,6 +96,9 @@
 
 .contact{
   height: auto !important;
+  background-size: 40vw 40vh !important;
+background-position-y: 0px !important;
+background-position-x: right !important;
 }
 .contact-section{
   padding-top: 5% !important;
