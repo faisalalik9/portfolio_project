@@ -276,3 +276,26 @@ function scroll_to_contact(){
 		scrollTop: $("#contact").offset().top - 76.78
 	},1500);
 }
+
+
+
+$('.about-img1').mouseover(function(){
+ $('.faisal').css("z-index","10");
+});
+$('.faisal').mouseleave(function(){
+ $(this).css("z-index","-10");
+});
+
+$('.about-img').mouseover(function(){
+  $('.ali').css("z-index","10");
+});
+$('.ali').mouseleave(function(){
+  $(this).css("z-index","-10");
+});
+
+$('.about-img2').mouseover(function(){
+  $('.khan').css("z-index","10");
+});
+$('.khan').mouseleave(function(){
+  $(this).css("z-index","-10");
+});
