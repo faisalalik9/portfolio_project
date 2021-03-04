@@ -9,6 +9,9 @@
   .top-container{
     display: block !important;
   }
+  .top{
+    height: auto !important;
+  }
 
   .top-left{
     padding-top: 20% !important;
@@ -16,13 +19,36 @@
   }
   .top-right{
     display: block !important;
-    
+    position: relative !important;
     width: 100% !important;
     padding-top: 20% !important;
   }
   .me-container{
-    width: 65% !important;
-    margin: 0 16.5% !important;
+    left: 50%;
+    position: absolute;
+  width: 65% !important;
+/* margin: 0 16.5% !important; */
+  transform: translateX(-50%);
+  }
+  .me-icons{
+    margin: 0 !important;
+  }
+.fa-facebook-square, .fa-instagram, .fa-github, .fa-linkedin{
+  transform: none !important;
+}
+.phone-icons{
+  display: flex;
+  justify-content: space-around;
+  margin: 4vh 0;
+  border-top: 2px solid black;
+}
+
+  .about-text{
+    transform: none !important;
+    padding-left: 4%;
+  }
+  .about-features-inside{
+    padding: 4% !important;
   }
   .me{
     top: 3.8vh !important;
@@ -80,7 +106,7 @@
     font-size: 16px !important;
 }
 .skills{
-  background-position-x: 70px !important;
+  background-position-x: 110px !important;
 background-position-y: 0 !important;
 }
 .skill-row{
