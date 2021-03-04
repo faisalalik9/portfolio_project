@@ -107,14 +107,34 @@
 }
 
 .right-container-con {
-  height: 80vh !important;
-  transform: none !important;
+  height: 85vh !important;
+  transform: translateY(-25vh) !important;
 }
 .right-details{
   padding: 4%;
   margin-left: 2vw !important;
   display: block !important;
 }
+.phone-d{
+  margin-bottom: 8%;
+}
+.location-d{
+  padding-left: 0 !important;
+}
+.rate-portfolio, .stars{
+  margin-left: 0 !important;
+}
+#star-value{
+  width: 10vw !important;
+}
+#small-p{
+  margin-top: 20vh;
+}
+
+
+
+
+
 
 
 }
