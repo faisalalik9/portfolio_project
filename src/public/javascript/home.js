@@ -18,56 +18,28 @@ $(window).scroll(function(){
   if (scroll >= 150) {
     $('nav').addClass("navb");
   }
-  if(scroll >= 1600){
+  if(scroll >= 1750){
+        $('.projects-count').each(function() {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: $this.text()
+          }).animate({
+              countNum: countTo
+            },
+            {
+              duration: 1000,
+              easing: 'swing',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
 
-    // setTimeout(function(){
-    //     $('.projects-count h3').text("2");
-    //   },1000);
-    //
-    //   setTimeout(function(){
-    //     $('.projects-count h3').text("3");
-    //   },1500);
-    //   setTimeout(function(){
-    //     $('.projects-count h3').text("4");
-    //   },2000);
-    //   setTimeout(function(){
-    //     $('.projects-count h3').text("5");
-    //   },2500);
-
-
-    // $({ Counter: 1 }).animate({
-    //   Counter: $('.projects-count h3').text()
-    // }, {
-    //   duration: 4000,
-    //   easing: 'swing',
-    //   step: function() {
-    //     $('.projects-count h3').text(Math.ceil(this.Counter));
-    //   }
-    // });
-
-
-
-    $('.projects-count').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
-        {
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-
-          }
+              }
+            });
         });
-    });
-    a = 1;
+        a = 1;
 
   }
 
@@ -150,6 +122,10 @@ $('.star-1-b').mouseover(function(){
 $('.star-1-b').click(function(){
 
   $('.star-1-a').addClass("show");
+  $('.star-2-a').removeClass("show");
+    $('.star-3-a').removeClass("show");
+      $('.star-4-a').removeClass("show");
+        $('.star-5-a').removeClass("show");
   $('#star-value').val("1");
 });
 $('.star-1-b').mouseleave(function(){
@@ -173,6 +149,9 @@ $('.star-2-b').mouseleave(function(){
 $('.star-2-b').click(function(){
   $('.star-1-a').addClass("show");
     $('.star-2-a').addClass("show");
+    $('.star-3-a').removeClass("show");
+      $('.star-4-a').removeClass("show");
+        $('.star-5-a').removeClass("show");
     $('#star-value').val("2");
 });
 
@@ -198,6 +177,8 @@ $('.star-3-b').click(function(){
   $('.star-1-a').addClass("show");
     $('.star-2-a').addClass("show");
       $('.star-3-a').addClass("show");
+        $('.star-4-a').removeClass("show");
+          $('.star-5-a').removeClass("show");
       $('#star-value').val("3");
 });
 
@@ -228,6 +209,7 @@ $('.star-4-b').click(function(){
     $('.star-2-a').addClass("show");
       $('.star-3-a').addClass("show");
         $('.star-4-a').addClass("show");
+          $('.star-5-a').removeClass("show");
         $('#star-value').val("4");
 });
 
@@ -264,3 +246,33 @@ $('.star-5-b').click(function(){
           $('.star-5-a').addClass("show");
           $('#star-value').val("5");
 });
+
+
+
+
+
+
+
+
+
+
+function scroll_to_about(){
+	$('html, body').animate({
+		scrollTop: $("#about").offset().top - 76.78
+	},1500);
+}
+function scroll_to_skills(){
+	$('html, body').animate({
+		scrollTop: $("#skills").offset().top - 76.78
+	},1500);
+}
+function scroll_to_projects(){
+	$('html, body').animate({
+		scrollTop: $("#projects").offset().top - 76.78
+	},1500);
+}
+function scroll_to_contact(){
+	$('html, body').animate({
+		scrollTop: $("#contact").offset().top - 76.78
+	},1500);
+}

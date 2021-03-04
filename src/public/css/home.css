@@ -46,6 +46,7 @@ nav{
 }
 
 .li-items{
+  cursor: pointer;
   margin-left: 5vw;
   padding: 1.5% 0;
   border-bottom: 2px solid transparent;
@@ -134,8 +135,8 @@ transform: translateY(-30px);
   color: #4267B2;
 }
 .fa-linkedin:hover{
-  box-shadow: 0px 5px 10px rgba(0,0,255,0.6);
-  color: blue;
+  box-shadow: 0px 5px 10px rgba(40,103,178, 0.7);
+  color: #2867B2;
 }
 .fa-github:hover{
   box-shadow: 0px 5px 10px rgba(0,0,0,0.6);
@@ -380,10 +381,19 @@ background-position-y: -6.5vh;
       background-position: -95% 100%;
 }
 
-
+.skill90p:hover{
+  background-position: -90% 100% !important;
+}
 .skill85:hover{
   background-position: -85% 100% !important;
 }
+.skill75p:hover{
+  background-position: -75% 100% !important;
+}
+.skill60p:hover{
+  background-position: -60% 100% !important;
+}
+
 
 .skill2{
   --slideBgColor: #A09BE7 !important;
@@ -866,6 +876,7 @@ align-items: center;
 }
 
 #star-value{
+  z-index: -10;
   border: none;
   background: none;
   font-size: 35px;

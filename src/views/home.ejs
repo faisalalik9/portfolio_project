@@ -24,10 +24,10 @@
         <section class="nav-options">
           <div class="">
               <ul class="nav-list">
-                <li class="li-items">About</li>
-                <li class="li-items">Skills</li>
-                <li class="li-items">Projects</li>
-                <li class="li-items">Contact</li>
+                <li class="li-items" onclick="scroll_to_about()">About</li>
+                <li class="li-items" onclick="scroll_to_skills()">Skills</li>
+                <li class="li-items" onclick="scroll_to_projects()">Projects</li>
+                <li class="li-items" onclick="scroll_to_contact()">Contact</li>
                 <li class="li-items">Private</li>
               </ul>
           </div>
@@ -52,8 +52,8 @@
           <div class="lines hidden">
            <div class="me-icons"><a href="https://www.linkedin.com/in/faisal-ali-khan-4409631aa/"><i class="fab fa-linkedin"></i></a>_____________________________________</div>
            <div class="me-icons"><a href="https://github.com/faisalalik9"><i class="fab fa-github"></i></a>_____________________________</div>
-            <div class="me-icons"><a href=""><i class="fab fa-instagram"></i></a>______________________</div>
-             <div class="me-icons"><a href=""><i class="fab fa-facebook-square"></i></a>_____________</div>
+            <div class="me-icons"><a href="https://www.instagram.com/faisalalik9/"><i class="fab fa-instagram"></i></a>_____________________</div>
+             <div class="me-icons"><a href="https://www.facebook.com/profile.php?id=100005987806100"><i class="fab fa-facebook-square"></i></a>_____________</div>
 
           </div>
           <div  class="me-container hidden">
@@ -66,7 +66,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="about-container">
          <section class="left-about">
           <div class="left-about-container">
@@ -151,7 +151,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="skills-container">
         <div class="skills-txt">
           <h2 class="heading-h2">S<span class="remaining">kills</span</h2>
@@ -318,10 +318,10 @@
 
           <div class="row skill-row">
             <div class="col-lg-3">
-              <div class="skill-box skill9">
+              <div class="skill-box skill9 skill90p">
                 <div class="skill-box-con">
                   <div class="skill-rating">
-                    95%
+                    90%
                   </div>
                   <div class="skill-name">
                     ROS
@@ -338,10 +338,10 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="skill-box skill10">
+              <div class="skill-box skill10 skill60p">
                 <div class="skill-box-con">
                   <div class="skill-rating">
-                    95%
+                    60%
                   </div>
                   <div class="skill-name">
                    Image Processing
@@ -356,8 +356,8 @@
 
               </div>
             </div>
-            <div class="col-lg-3 skill11">
-              <div class="skill-box">
+            <div class="col-lg-3 ">
+              <div class="skill-box skill11 skill75p">
                 <div class="skill-box-con">
                   <div class="skill-rating">
                     75%
@@ -399,7 +399,7 @@
       </div>
     </section>
 
-    <section  class="projects">
+    <section  class="projects" id="projects">
       <div class="projects-container">
         <div class="projects-txt">
           <div class="heading-h2-div">
@@ -472,7 +472,7 @@
 
           <div class="project-block">
            <div class="project-img-div">
-              <img class="project-img-bg"src="/assets/debuggers1.jpg" alt="">
+              <img class="project-img-bg"src="/assets/debug.jpg" alt="">
               <div class="project-img-top">
                 <div class="project-img-top-content">
                   <h3>DEBUGGERS </h3>
@@ -584,7 +584,7 @@ Google APIs.</p>
 
     <!-- contact section -->
 
-    <section class="contact">
+    <section class="contact" id="contact">
 
       <div class="contact-container">
         <div class="contact-txt">
@@ -597,27 +597,29 @@ Google APIs.</p>
               <div class="get-in-touch-txt">
                 <h3>Get in Touch</h3>
               </div>
+              <form action="/" method="post">
               <div class="contact-input-name">
                 <div class="name-c">
                   Name
                 </div>
-                <input class="input-name-c" type="text" name="" value="" placeholder="Enter your Name">
+                <input class="input-name-c" type="text" name="name" value="" placeholder="Enter your Name">
               </div>
               <div class="contact-input-name">
                 <div class="name-c">
                   Email
                 </div>
-                <input class="input-name-c" type="text" name="" value="" placeholder="Enter your Email">
+                <input required="true" class="input-name-c" type="text" name="email" value="" placeholder="Enter your Email">
               </div>
               <div class="message-c">
                 <div class="message-c-txt">
                   Your Message
                 </div>
-                <textarea class="textarea-c"name="name" rows="1" placeholder="Type your message" ></textarea>
+                <textarea required="true" class="textarea-c"name="message" rows="1" placeholder="Type your message" ></textarea>
               </div>
               <div class="submit-c">
-                <button type="submit" name="button">Submit</button>
+                <button type="submit">Submit</button>
               </div>
+            </form>
             </div>
           </section>
           <section class="right-contact">
@@ -643,7 +645,7 @@ Google APIs.</p>
                 <div class="right-details location">
                   <div class="phone-d location-d">
                     <div class="phone-icon">
-                      <i class="fas fa-map-marker-alt"></i>
+                      <a class="call" href="https://goo.gl/maps/S4fJxvQDg9gkJTGK8"><i class="fas fa-map-marker-alt"></i></a>
                     </div><div class="phone-txt">
                       NIT Kurukshetra, Kurukshetra
                     </div>
@@ -668,12 +670,14 @@ Google APIs.</p>
                    <div class="selector-star"><i class="far fa-star star-4-b"></i><i class="fas fa-star star-4-a star-after"></i></div>
                    <div class="selector-star"><i class="far fa-star star-5-b"></i><i class="fas fa-star star-5-a star-after"></i></div>
                 </div>
+                <form action ="/rating" method="post">
                 <div class="stars">
-                  <input disabled="true" id="star-value" type="text" name="" value="" placeholder="">
+                  <input required="true" id="star-value" type="text" name="star" value="" placeholder="">
                 </div>
                 <div class="stars">
-                  <button id="rating-btn" type="button" name="button">Rate</button>
+                  <button id="rating-btn" type="submit" >Rate</button>
                 </div>
+              </form>
               </div>
           </section>
         </div>
