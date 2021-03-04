@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
+const mongoose = require('./db.js').mongoose;
 var bodyParser = require('body-parser');
 const app = express();
 
@@ -15,8 +15,7 @@ app.use(express.static(pathName));
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
-const url = "mongodb+srv://faisal123:faisal123@cluster0.8yumn.mongodb.net/User-data?retryWrites=true&w=majority"
-mongoose.connect(url);
+
 
 const userSchema = new mongoose.Schema(
   {
@@ -37,14 +36,14 @@ const userSchema = new mongoose.Schema(
 
  const ratingSchema = new mongoose.Schema(
    {
-     data:Object,
+     star:"string",
    },
    {
      collection: "rating"}
   );
   const Rating = mongoose.model("Rating",ratingSchema);
   const ratingData = (bodyData) => {
-    Rating({data:bodyData}).save((err)=>{
+    Rating({star:bodyData}).save((err)=>{
       if(err){
         throw err;
       }
