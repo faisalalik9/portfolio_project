@@ -30,16 +30,57 @@
   }
   .right-about{
     width: 100% !important;
+    padding: 10% 0;
   }
   .right-about-container {
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
 }
-
-
-
-
+.about{
+   height: auto !important;
+}
+.about-features ul {
+    list-style: none !important;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+    width: 50% !important;
+}
+.about-content h3 {
+    font-size: 1.2em !important;
+}
+.college {
+    margin: 0 !important;
+    font-size: 1em !important;
+}
+.skill-row{
+  margin-bottom: 3vh !important;
+}
+.skill-box{
+  margin-bottom: 3vh;
+}
+.skill4, .skill8{
+  margin-bottom: 0 !important;
+}
+.projects-list{
+  display: block !important;
+}
+.project-img-div {
+  width: 100% !important
+}
+.hidden-project{
+  height: 0  ;
+  display: block !important;
+}
+.project-block{
+  display: block !important;
+}
+.project-desc, .project-extra {
+    width: 100% !important;
+}
+.project2{
+  display: block !important;
+}
 
 
 }
