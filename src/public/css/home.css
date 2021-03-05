@@ -83,6 +83,10 @@
     display: flex !important;
     justify-content: center !important;
 }
+
+#phone-images-about{
+  display: block !important;
+}
 .about{
    height: auto !important;
 }
@@ -121,6 +125,7 @@ background-position-y: 0 !important;
 .projects-list{
   display: block !important;
 }
+
 .project-img-div {
   width: 100% !important
 }
@@ -847,7 +852,7 @@ background: linear-gradient(180deg, #46AEF7 -20.85%, rgba(22, 217, 227, 0.45) 40
 }
 
 .projects-list{
-  padding: 3% 1%;
+  padding: 0% 1%;
   display: flex;
   align-items: center;
 }
