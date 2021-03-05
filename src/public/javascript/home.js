@@ -12,6 +12,16 @@ function fadein(){
   $('.hidden').fadeIn(1000).removeClass('hidden');
 
 }
+
+
+$('.toggler-nav-icon').click(function(){
+  $('.slider-top').css("display","block");
+});
+$('.slider-cut').click(function(){
+  $('.slider-top').css("display","none");
+});
+
+
 var a = 1;
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();

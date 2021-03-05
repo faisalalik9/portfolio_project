@@ -1407,3 +1407,39 @@ transition: all 300ms linear;
   text-decoration: none;
   color: #212529;
 }
+
+
+
+.slider-top{
+  display: none;
+  position: fixed;
+    height: 100vh;
+    background: rgba(255,255,255,0.9);
+    width: 100vw;
+    z-index: 1000;
+}
+.slider-container{
+  position: relative;
+  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-list{
+  display: flex;
+    width: 60%;
+    justify-content: center;
+}
+.slider-list ul{
+  font-size: 28px;
+    list-style: none;
+}
+.slider-list ul li{
+  margin: 4vh 0 !important;
+}
+.slider-cut{
+  font-size: 28px;
+    position: absolute;
+    top: 8vh;
+    right: 15vw;
+}
