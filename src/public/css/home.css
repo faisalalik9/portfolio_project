@@ -1438,6 +1438,7 @@ transition: all 300ms linear;
   margin: 4vh 0 !important;
 }
 .slider-cut{
+  cursor: pointer;
   font-size: 28px;
     position: absolute;
     top: 8vh;
