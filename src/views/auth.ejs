@@ -1,0 +1,102 @@
+<%- include('partials/header')%>
+
+
+
+<body>
+
+<div class="main-div">
+
+<div class="main-div-container">
+<div class="eyes">
+  <img src="/assets/eyes.gif" alt="">
+</div>
+
+<div class="form-container">
+  <div class="form">
+    <div class="text">
+      <h3>Please tell me who are you ?</h3>
+    </div>
+
+    <div class="form-area">
+      <form class="" action="/private" method="post">
+        <div class="name">
+          <label for="name">Name</label>
+          <input id="name-inp" type="text" name="name" value="" placeholder="Enter your name">
+        </div>
+        <div class="password">
+          <label for="password">Password</label>
+          <input id="pass-inp" type="password" name="password" value="" placeholder="Enter your password">
+        </div>
+
+        <div class="button">
+          <button type="submit">Check</button>
+        </div>
+
+      </form>
+
+      <% if(!value){%>
+        <h6 class="intrusion">Sorry, you are not authorised to enter!</h6>
+        <h6 class="return"><a href="/">Return to Portfolio</a></h6>
+        <%}%>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <%- include('partials/footer')%>

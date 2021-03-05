@@ -1402,3 +1402,8 @@ transition: all 300ms linear;
   background: #ff005c;
   color: white;
 }
+
+#private{
+  text-decoration: none;
+  color: #212529;
+}

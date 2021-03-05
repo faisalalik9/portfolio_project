@@ -1,0 +1,136 @@
+@media only screen and (max-width: 600px){
+  .eyes{
+    top: 3vh !important;
+  }
+}
+
+@media only screen and (max-height: 600px){
+  .eyes{
+    top: 3vh !important;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main-div{
+  height: 100vh;
+  width: 100%;
+}
+
+.main-div-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form-container{
+  padding: 5%;
+  margin-top: 3vh;
+}
+
+.text{
+  margin-bottom: 4vh;
+}
+
+form :is(.name, .password){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+  padding: 2% 0;
+
+  height: 54.93px;
+}
+
+
+#name-inp, #pass-inp{
+  font-size: 17px;
+  padding: 2%;
+  width: 70%;
+  border: none;
+  background: none;
+  border-bottom: 2px solid black;
+  transition: all 300ms linear;
+}
+
+#name-inp:focus, #pass-inp:focus{
+  outline: none;
+  border-bottom: 2px solid #1687a7;
+  padding-bottom: 1%;
+}
+
+label{
+
+  margin: 0;
+  font-size: 18px;
+}
+
+.button{
+  margin-top: 3vh;
+  padding: 2% 0;
+}
+
+.button button{
+  font-size: 18px;
+  border: 2px solid #46aef7;
+  background: none;
+  width: 100%;
+  padding: 2% 0;
+  height: 50px;
+
+
+  --initialTextColor: #000;
+      --slideTextColor: #FFF;
+
+      --initialBgColor: white;
+      --slideBgColor: rgb(22 217 227);
+      --slideBgColor2: #46aef7;
+      color: var(--initialTextColor);
+
+      background-image: linear-gradient(90deg,
+          var(--slideBgColor2) 0%,
+          var(--slideBgColor) 50%,
+          var(--slideBgColor2) 100%);
+      background-size: 200%;
+      transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+        color .2s linear;
+      transition-delay: 0.0s, 0.15s;
+}
+.button button:hover{
+ border: none;
+  outline:2px solid #46aef7;
+  color: var(--slideTextColor);
+      cursor: pointer;
+      background-position: -100% 100%;
+}
+
+.eyes{
+  width: 170px;
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.eyes img{
+  width: 100%;
+}
+
+.intrusion{
+  margin-top: 2vh;
+  text-align: center;
+  color: #e74c3c;
+}
+.return{
+  margin-top: 1vh;
+  text-align: center;
+}
+.return a{
+  text-decoration: none;
+
+}

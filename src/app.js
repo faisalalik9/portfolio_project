@@ -53,23 +53,45 @@ const userSchema = new mongoose.Schema(
 
 
 
-app.post("/",function(req,res){
-  console.log(req.body);
-  userData(req.body);
-  res.redirect("/");
-});
+  app.post("/",function(req,res){
+    console.log(req.body);
+    userData(req.body);
+    res.redirect("/");
+  });
 
-app.post("/rating",function(req,res){
-  console.log(req.body.star);
-  ratingData(req.body.star);
-  res.redirect("/");
-})
+  app.post("/rating",function(req,res){
+    console.log(req.body.star);
+    ratingData(req.body.star);
+    res.redirect("/");
+  })
 
 
 
-app.get("/",function(req,res){
-  res.render("home");
-});
+  app.get("/",function(req,res){
+    res.render("home");
+  });
+
+
+  app.get("/auth",function(req,res){
+    res.render("auth",{value:true});
+  });
+
+  app.post("/private",function(req,res){
+   console.log(req.body);
+  var name = req.body.name;
+  var password = req.body.password;
+
+    console.log(name);
+    console.log(password);
+
+    if(name === "Nova" && password === "Rdsharma12$"){
+      res.send("Nova detected");
+    }
+    else{
+      var value = false;
+      res.render("auth",{value:value});
+    }
+ });
 
 
 
