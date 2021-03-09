@@ -87,6 +87,7 @@ $(function(){
 });
 
 $('.project-img-div').click(function(){
+  $(this).siblings('.hidden-project').addClass('toggle-projj');
   $(this).parent().css("background","white");
   $(this).addClass('height-min');
   $(this).siblings(".toggle-project-width").css("display","block");
@@ -122,6 +123,7 @@ $('.toggle-project-width').click(function(){
   $(this).parent().parent().css("display","flex");
   $('.project-img-bg').css("height","100%");
   $(this).parent().css("background","none");
+  $(this).siblings('.hidden-project').removeClass('toggle-projj');
 
 });
 
