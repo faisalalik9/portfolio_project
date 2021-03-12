@@ -1,8 +1,34 @@
 const express = require('express');
 const path = require('path');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
 const mongoose = require('./db.js').mongoose;
 var bodyParser = require('body-parser');
+const keys = require('./keys');
+require('./models/user');
+require('./services/passport');
+
+
 const app = express();
+
+
+app.use(cookieSession({
+  maxAge: 30*24*60*60*1000,
+  keys: [keys.cookieKey]
+})
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+require('./routes/authRoutes')(app);
+
+
+
+
+
 
 app.set("view engine", "ejs");
 
@@ -92,6 +118,9 @@ const userSchema = new mongoose.Schema(
       res.render("auth",{value:value});
     }
  });
+
+
+
 
 
 
