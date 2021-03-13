@@ -19,8 +19,6 @@ module.exports = app =>{
     res.send("Logged out Successfully");
   });
 
-  app.get('/api/user',(req,res)=>{
-    res.send(req.user);
-  });
+
 
 }

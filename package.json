@@ -16,9 +16,11 @@
     "cookie-session": "^1.4.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "moment": "^2.29.1",
     "mongoose": "^5.11.18",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "socket.io": "^4.0.0"
   }
 }

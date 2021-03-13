@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const http = require('http');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const mongoose = require('./db.js').mongoose;
@@ -8,8 +9,11 @@ const keys = require('./keys');
 require('./models/user');
 require('./services/passport');
 
-
+const socketio = require('socket.io');
+const formatMessage = require('./messages');
 const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
 
 
 app.use(cookieSession({
@@ -24,9 +28,6 @@ app.use(passport.session());
 
 
 require('./routes/authRoutes')(app);
-
-
-
 
 
 
@@ -120,13 +121,38 @@ const userSchema = new mongoose.Schema(
  });
 
 
+// app.get("/chat",function(req,res){
+//   res.render("chatapp");
+// });
+var userUser;
+app.get('/chat',(req,res)=>{
+  userUser = req.user;
+  console.log(userUser);
+  res.render('chatapp',{user:userUser});
+});
+
+
+io.on('connection', (socket)=>{
+
+  socket.emit('message', formatMessage('Nova','null', "Welcome User, I am Nova's Assistant !"));
+
+  socket.broadcast.emit('message',formatMessage('Nova','null','New user has joined'));
+
+
+  socket.on('disconnect', ()=>{
+    io.emit('message','User has left');
+  });
+
+
+  socket.on('chatMessage',(msg)=>{
+    io.emit('message',formatMessage(userUser.name,userUser.image,msg));
+  });
+
+
+});
 
 
 
 
 
-
-
-
-
-module.exports=app;
+module.exports=server;
