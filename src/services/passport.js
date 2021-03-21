@@ -9,10 +9,16 @@ passport.serializeUser((user, done)=>{
 });
 
 passport.deserializeUser((id, done)=>{
-  user.findById(id)
-  .then(user=>{
-    done(null,user);
-  });
+  try{
+    user.findById(id)
+    .then(user=>{
+      done(null,user);
+    });
+  }
+  catch(e){
+    console.log("error",e);
+  }
+
 });
 
 
@@ -22,23 +28,31 @@ passport.use(new googleStrategy({
   callbackURL: '/auth/google/callback'
 }, (accessToken,refreshToken,profile,done)=>{
     console.log(profile);
-    user.findOne({googleId: profile.id})
-      .then((existingUser) =>{
-        if(existingUser){
-              done(null,existingUser);
-              console.log("User exists");
+    try{
+      user.findOne({googleId: profile.id})
+        .then((existingUser) =>{
+          if(existingUser){
+                done(null,existingUser);
+                console.log("User exists");
 
-        }else{
+          }else{
 
-            new user({
-              googleId: profile.id,
-              name: profile.displayName,
-              image: profile.photos[0].value})
-              .save()
-              .then(user =>done(null,user));
+              new user({
+                googleId: profile.id,
+                name: profile.displayName,
+                image: profile.photos[0].value})
+                .save()
+                .then(user =>done(null,user));
 
-        }
-      });
+          }
+        });
+    }
+    catch(e){
+      console.log("error",e);
+    }
+
+
+
 
 
 

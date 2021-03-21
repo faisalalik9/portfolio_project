@@ -4,9 +4,11 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   googleId: String,
   name: String,
-  image: String
-
+  image: String,
+  messages: Array
 });
+
+
 
 
 mongoose.model('users', userSchema);

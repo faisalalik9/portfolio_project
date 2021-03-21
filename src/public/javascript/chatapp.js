@@ -2,6 +2,10 @@ const chatForm = $('#message-form');
 const socket = io();
 const chatMessages = $('.messages-container');
 
+const {user} = "Faisal Ali";
+socket.emit('joinRoom',{user})
+
+
 socket.on('message', message=>{
   console.log(message);
   outputMessage(message);

@@ -16,6 +16,10 @@
   .top-left{
     padding-top: 20% !important;
     width: 100% !important;
+    background-size: 150px 380px !important;
+    background-position-x: 28px !important;
+    background-position-y: -14vh !important;
+
   }
   .top-right{
     display: block !important;
@@ -254,6 +258,9 @@ background-position-x: right !important;
 
 
 
+
+
+
 *{
   padding: 0;
   margin: 0;
@@ -363,7 +370,12 @@ nav{
   justify-content: center;
 }
 .top-left{
+  background-size: 300px 500px;
+  background-image: url(/assets/block.svg);
+  background-repeat: no-repeat;
+  background-position-x: 28px;
   width: 45%;
+  background-position-y: -8vh;
 }
 .top-right{
   width: 55%;

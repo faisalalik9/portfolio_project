@@ -6,6 +6,7 @@ const passport = require('passport');
 const mongoose = require('./db.js').mongoose;
 var bodyParser = require('body-parser');
 const keys = require('./keys');
+const moment = require('moment');
 require('./models/user');
 require('./services/passport');
 
@@ -51,7 +52,7 @@ const userSchema = new mongoose.Schema(
   {
     collection: "Users"}
  );
- const User = mongoose.model("User",userSchema);
+const User = mongoose.model("User",userSchema);
  const userData = (bodyData) => {
    User({data:bodyData}).save((err)=>{
      if(err){
@@ -68,7 +69,7 @@ const userSchema = new mongoose.Schema(
    {
      collection: "rating"}
   );
-  const Rating = mongoose.model("Rating",ratingSchema);
+const Rating = mongoose.model("Rating",ratingSchema);
   const ratingData = (bodyData) => {
     Rating({star:bodyData}).save((err)=>{
       if(err){
@@ -112,7 +113,10 @@ const userSchema = new mongoose.Schema(
     console.log(password);
 
     if(name === "Nova" && password === "Rdsharma12$"){
-      res.send("Nova detected");
+
+      getUsers();
+
+      res.render('private',{clients:clients, size:size});
     }
     else{
       var value = false;
@@ -121,32 +125,82 @@ const userSchema = new mongoose.Schema(
  });
 
 
-// app.get("/chat",function(req,res){
-//   res.render("chatapp");
-// });
-var userUser;
+
+const Client = mongoose.model('users');
+let clients;
+let size;
+ async function getUsers(){
+
+   clients = await Client.find();
+   size = clients.length;
+   console.log("client: ",clients);
+   console.log(clients.length);
+ }
+
+let userUser;
 app.get('/chat',(req,res)=>{
   userUser = req.user;
   console.log(userUser);
-  res.render('chatapp',{user:userUser});
+  res.render('chatapp');
 });
+
+const roomName = "Faisal 5128";
+
+async function addMessage(msg,time,user){
+  currentUser = await Client.updateOne({googleId:userUser.googleId},{
+    $addToSet:{
+      messages:{message:msg,time:time,user:user}
+    }
+  });
+
+  console.log(currentUser);
+  console.log("Done");
+}
 
 
 io.on('connection', (socket)=>{
 
-  socket.emit('message', formatMessage('Nova','null', "Welcome User, I am Nova's Assistant !"));
+if(userUser){
+  socket.on('joinRoom',({user})=>{
 
-  socket.broadcast.emit('message',formatMessage('Nova','null','New user has joined'));
+  socket.join(userUser.name);
+
+  socket.emit('message', formatMessage('Nova','https://avatars.githubusercontent.com/u/66014401?s=400&u=c77226d568829aeb2b96c3078fe5d52b9c78a3e4&v=4', "Welcome User, I am Nova's Assistant !"));
+
+  socket.broadcast.to(userUser.name).emit('message',formatMessage('Nova','https://avatars.githubusercontent.com/u/66014401?s=400&u=c77226d568829aeb2b96c3078fe5d52b9c78a3e4&v=4',`${userUser.name} has joined`));
 
 
-  socket.on('disconnect', ()=>{
-    io.emit('message','User has left');
   });
+
+
 
 
   socket.on('chatMessage',(msg)=>{
-    io.emit('message',formatMessage(userUser.name,userUser.image,msg));
+    addMessage(msg, moment().format('h:mm a'),"user");
+    io.to(userUser.name).emit('message',formatMessage(userUser.name,userUser.image,msg));
+
+
+    socket.on('disconnect', ()=>{
+      io.emit('message','User has left');
+    });
+
   });
+
+}
+else{
+  socket.on('chatMessage',(msg)=>{
+    addMessage(msg, moment().format('h:mm a'),"nova");
+    io.to(roomName).emit('message',formatMessage(roomName,'https://avatars.githubusercontent.com/u/66014401?s=400&u=c77226d568829aeb2b96c3078fe5d52b9c78a3e4&v=4',msg));
+});
+
+}
+
+
+
+
+
+
+
 
 
 });

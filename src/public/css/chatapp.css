@@ -121,7 +121,10 @@
 .message-input-container input:focus{
   outline: none;
 }
-
+.message-input-container button{
+  background: none;
+  border: none;
+}
 .send-btn{
   height: 60%;
   width: 20%;
