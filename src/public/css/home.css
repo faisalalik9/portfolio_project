@@ -1,5 +1,6 @@
 @media only screen and (max-width: 600px){
 
+
   .nav-list{
     display: none !important;
   }
@@ -49,7 +50,8 @@
 
   .about-text{
     position: relative !important;
-    left: 5%;
+    left: 0%;
+    margin-left: 5vw;
   }
   .about-features-inside{
     padding: 4% !important;
@@ -250,8 +252,7 @@ background-position-x: right !important;
 
 
 .project-top-bg{
-  height: 5vh !important;
-  background-position-x: 0 !important;
+  display: none !important;
 }
 
 
